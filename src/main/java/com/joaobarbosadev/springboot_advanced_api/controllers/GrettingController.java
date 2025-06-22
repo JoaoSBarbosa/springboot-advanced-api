@@ -14,12 +14,12 @@ import com.joaobarbosadev.springboot_advanced_api.model.Greetings;
 @RequestMapping("/grettings")
 public class GrettingController {
 	
-	private final static String template = "Hello, %S!";
+	private final static String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
 	
 	@GetMapping
-	public ResponseEntity<Greetings> gretting(@RequestParam String name){
-		
+	public ResponseEntity<Greetings> gretting(
+			@RequestParam(defaultValue = "Word", required = false) String name){
 		Greetings greeting = new Greetings(counter.incrementAndGet(), String.format(template, name));
 		return ResponseEntity.ok(greeting);
 	}

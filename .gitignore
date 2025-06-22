@@ -4,6 +4,16 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+
+*.class
+
+
+/node_modules
+
+# SSH Keys
+
+*.pem
+*.ppk
 ### STS ###
 .apt_generated
 .classpath
@@ -12,12 +22,21 @@ target/
 .settings
 .springBeans
 .sts4-cache
+#Eclipse files
+**/.project
+**/.classpath
+**/.settings/
+/bin/
+blog/bin/
+**/.tern-project
+**/.factorypath
 
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
+**/.gradle
 
 ### NetBeans ###
 /nbproject/private/
@@ -32,8 +51,39 @@ build/
 ### VS Code ###
 .vscode/
 
+
+
+
+
 ### Spring Boot Properties ###
 src/main/resources/application.properties
 src/main/resources/application.yml
 src/main/resources/application-*.properties
 src/main/resources/application-*.yml
+
+
+### Ferramentas mobile para JAVA (J2ME)
+.mtj.tmp/
+
+### JAVA
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/.metadata/
+
+#Other Files
+*.ini
+
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.rar
+*.tar.gz
